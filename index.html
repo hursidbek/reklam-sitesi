@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern web siteleri, AI cozumler ve frontend gelistirme. Hursidbek ile isletmeniz icin hizli, guvenli ve modern web projeleri.">
+    <title>Modern Web Siteleri ve Akilli AI Cozumler</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" style="cursor:pointer;">Hursidbek</div>
+        <ul class="nav-links">
+            <li><a href="#hizmetler">Hizmetler</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#hakkimda">Hakkimda</a></li>
+            <li><a href="#iletisim">Iletisim</a></li>
+        </ul>
+        <button id="open-offer-modal" class="btn-primary" type="button">Teklif Al</button>
+    </nav>
+
+    <div id="offer-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:10000; justify-content:center; align-items:center;">
+        <div style="background:#18192a; padding:2rem 1.5rem; border-radius:12px; min-width:320px; max-width:90vw; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative;">
+            <button id="close-offer-modal" style="position:absolute; top:12px; right:16px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+            <h2 style="margin-top:0; color:#fff;">Teklif Gonder</h2>
+            <form id="offer-form">
+                <label for="offer-message" style="color:#fff; display:block; margin-bottom:4px;">Teklif metni:</label>
+                <textarea id="offer-message" rows="4" style="width:100%; margin-bottom:1rem; border-radius:6px; border:1px solid #444; padding:8px; background:#23243a; color:#fff; box-sizing:border-box;"></textarea>
+                <label for="offer-phone" style="color:#fff; display:block; margin-bottom:4px;">Telefon numarasi:</label>
+                <input id="offer-phone" type="tel" placeholder="05XX XXX XX XX" style="width:100%; margin-bottom:1rem; border-radius:6px; border:1px solid #444; padding:8px; background:#23243a; color:#fff; box-sizing:border-box;" required>
+                <button type="submit" class="btn-primary" style="width:100%;">Gonder</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <span class="badge">Frontend Developer &amp; AI Enthusiast</span>
+            <h1><span class="highlight">Modern</span> Web Siteleri<br>ve Akilli <span class="ai">AI</span> Cozumler</h1>
+            <p>Isletmeniz icin hizli, guvenli ve kullanici dostu web siteleri ile AI entegrasyonlari gelistiriyorum.</p>
+            <div class="hero-buttons">
+                <a href="#iletisim" class="btn-primary">Projeye Basla</a>
+                <a href="#projeler" class="btn-secondary">Calismalarim</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="gif-section" style="display:flex; justify-content:center; margin:32px 0 0 0;">
+        <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Developer GIF" style="max-width:320px; width:100%; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.12);">
+    </div>
+
+    <div class="tech-icons" id="tech-icons" style="display:flex; gap:24px; justify-content:center; align-items:center; margin:32px 0 0 0;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" style="width:48px; height:48px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" style="width:48px; height:48px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" style="width:48px; height:48px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" style="width:48px; height:48px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" style="width:48px; height:48px;">
+    </div>
+
+    <section id="hizmetler" class="services-section" style="display:none;">
+        <h2>Hizmetlerim</h2>
+        <ul class="services-list">
+            <li><strong>Sifirdan proje gelistirme:</strong> Fikirden tam islevsel web sitesi veya uygulamaya kadar.</li>
+            <li><strong>Web sitesi olusturma:</strong> Kurumsal, kisisel ve portfolyo siteleri.</li>
+            <li><strong>Web uygulamalari:</strong> Interaktif ve modern web-app projeleri.</li>
+            <li><strong>AI entegrasyonu:</strong> Chatbot, otomatik yanit sistemi ve akilli hizmet eklentileri.</li>
+            <li><strong>Site optimizasyonu:</strong> Hiz ve SEO icin tam optimizasyon.</li>
+            <li><strong>Teknik destek:</strong> Proje sonrasinda da surekli destek ve danismanlik.</li>
+        </ul>
+    </section>
+
+    <section id="projeler" class="projects-section" style="display:none; margin-top:3rem;">
+        <h2 class="projects-title">Projelerim</h2>
+        <p class="projects-desc">Merhaba! Asagida gelistirdigim bazi web projelerime goz atabilirsiniz. Her proje modern teknolojiler temel alinarak, musteri ihtiyaclari ve kullanici deneyimine odaklanilarak olusturulmustur.</p>
+        <ul class="projects-list">
+            <li><span class="project-icon" style="color:#f87171;">&#128640;</span> <strong>Kurumsal Web Sitesi</strong> &mdash; Sirketler icin modern, mobil uyumlu ve hizli calisan web sitesi. <span class="project-tech">Teknolojiler: HTML, CSS, JavaScript</span></li>
+            <li><span class="project-icon" style="color:#60a5fa;">&#128241;</span> <strong>Portfolyo Sitesi</strong> &mdash; Kisisel marka icin minimalist ve interaktif portfolyo sitesi. <span class="project-tech">Teknolojiler: HTML, CSS, React</span></li>
+            <li><span class="project-icon" style="color:#a78bfa;">&#129302;</span> <strong>AI Chatbot Entegrasyonu</strong> &mdash; Web sitesine yapay zeka tabanli chatbot ekleme. <span class="project-tech">Teknolojiler: JavaScript, Python (AI), API</span></li>
+        </ul>
+        <p class="projects-note">Tum projelerimde hiz, guvenlik ve modern tasarim on plandadir. Daha fazla bilgi veya demo icin <a href="#iletisim">iletisim</a> bolumunden ulasabilirsiniz.</p>
+    </section>
+
+    <section id="hakkimda" class="about-section" style="display:none;">
+        <h2>Hakkimda</h2>
+        <p>Merhaba! Ben Hursidbek &mdash; frontend gelistirici ve AI entegrasyonu uzerine calisan bir yazilimciyim.</p>
+        <p>Isletmeler icin modern, hizli ve kullanici dostu web siteleri gelistiriyorum. Her projede yalnizca guzel gorunumu degil, musteri kazandiran etkinligi de on planda tutuyorum.</p>
+        <p>Frontend teknolojileri (HTML, CSS, JavaScript, React) ile calisiyor ve sitelerinize AI (chatbot, akilli sistemler) ekleyerek onlari daha guclu hale getiriyorum.</p>
+        <p>Amacim &mdash; musterilerime guvenilir, hizli ve kaliteli hizmet sunmak ve isletmelerinin buyumesine katki saglamak.</p>
+        <ul>
+            <li>&#128640; Hizli ve kaliteli is</li>
+            <li>&#128241; Mobil uyumlu tasarim</li>
+            <li>&#129302; AI entegrasyon imkani</li>
+            <li>&#8987; Her zaman ulasılabilir</li>
+        </ul>
+    </section>
+
+    <section id="iletisim" class="contact-section" style="display:none; margin-top:3rem;">
+        <h2 class="contact-title">Iletisim</h2>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:1.5rem;">
+            <a href="https://wa.me/905436440630?text=Merhaba,%20proje%20baslatmak%20istiyorum" target="_blank" class="btn-primary" style="background:#25D366; color:#fff; min-width:180px; text-align:center;">&#128172; WhatsApp</a>
+            <a href="https://t.me/xurshidbek_066" target="_blank" class="btn-primary" style="background:#229ED9; color:#fff; min-width:180px; text-align:center;">&#128172; Telegram</a>
+            <a href="https://instagram.com/xurshidbek_06" target="_blank" class="btn-primary" style="background:#E4405F; color:#fff; min-width:180px; text-align:center;">&#128248; Instagram</a>
+        </div>
+    </section>
+
+    <div id="ai-chatbot" style="position:fixed; bottom:24px; right:24px; z-index:9999;">
+        <div id="chatbot-window" style="display:none; background:#18192a; color:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); width:320px; max-width:90vw; padding:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong>&#129302; AI Asistan</strong>
+                <button id="close-chatbot" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">&times;</button>
+            </div>
+            <div id="chat-messages" style="height:220px; overflow-y:auto; margin:0 0 1rem 0; background:#23243a; border-radius:8px; padding:8px; font-size:0.98rem;"></div>
+            <form id="chat-form" style="display:flex; gap:8px;">
+                <input id="chat-input" type="text" placeholder="Sorunuzu yazin..." style="flex:1; border-radius:6px; border:1px solid #444; padding:8px; background:#23243a; color:#fff;" required />
+                <button type="submit" style="background:#4f46e5; color:#fff; border:none; border-radius:6px; padding:8px 12px; cursor:pointer;">Gonder</button>
+            </form>
+        </div>
+        <button id="open-chatbot" style="background:#4f46e5; color:#fff; border:none; border-radius:50%; width:56px; height:56px; font-size:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.18); cursor:pointer;">&#129302;</button>
+    </div>
+
+    <script>
+        const offerModal = document.getElementById('offer-modal');
+        document.getElementById('open-offer-modal').addEventListener('click', () => { offerModal.style.display = 'flex'; });
+        document.getElementById('close-offer-modal').addEventListener('click', () => { offerModal.style.display = 'none'; });
+        offerModal.addEventListener('click', (e) => { if (e.target === offerModal) offerModal.style.display = 'none'; });
+        document.getElementById('offer-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            offerModal.style.display = 'none';
+            alert('Teklifiniz gonderildi!');
+            this.reset();
+        });
+
+        function showSection(sectionId) {
+            const sections = ['hero', 'gif-section', 'tech-icons', '.about-section', '.services-section', '.projects-section', '.contact-section'];
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('gif-section').style.display = 'none';
+            document.getElementById('tech-icons').style.display = 'none';
+            document.querySelector('.about-section').style.display = 'none';
+            document.querySelector('.services-section').style.display = 'none';
+            document.querySelector('.projects-section').style.display = 'none';
+            document.querySelector('.contact-section').style.display = 'none';
+            if (sectionId === 'home') {
+                document.getElementById('hero').style.display = 'flex';
+                document.getElementById('gif-section').style.display = 'flex';
+                document.getElementById('tech-icons').style.display = 'flex';
+            } else {
+                document.getElementById(sectionId).style.display = 'block';
+            }
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href').replace('#', '');
+                const map = { hizmetler: 'hizmetler', projeler: 'projeler', hakkimda: 'hakkimda', iletisim: 'iletisim' };
+                showSection(map[href] || 'home');
+            });
+        });
+
+        document.querySelector('.logo').addEventListener('click', () => showSection('home'));
+
+        const chatbotWindow = document.getElementById('chatbot-window');
+        document.getElementById('open-chatbot').addEventListener('click', () => chatbotWindow.style.display = 'block');
+        document.getElementById('close-chatbot').addEventListener('click', () => chatbotWindow.style.display = 'none');
+
+        const chatMessages = document.getElementById('chat-messages');
+        function appendMessage(sender, text) {
+            const msg = document.createElement('div');
+            msg.innerHTML = '<strong>' + sender + ':</strong> ' + text;
+            msg.style.marginBottom = '8px';
+            chatMessages.appendChild(msg);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        document.getElementById('chat-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const input = document.getElementById('chat-input');
+            const userMsg = input.value.trim();
+            if (!userMsg) return;
+            appendMessage('Siz', userMsg);
+            input.value = '';
+            appendMessage('AI', '<span style="color:#aaa;">Yukleniyor...</span>');
+            try {
+                const res = await fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: userMsg })
+                });
+                const data = await res.json();
+                chatMessages.lastChild.innerHTML = '<strong>AI:</strong> ' + data.answer;
+            } catch (err) {
+                chatMessages.lastChild.innerHTML = '<strong>AI:</strong> <span style="color:#f87171;">Bir hata olustu.</span>';
+            }
+        });
+    </script>
+</body>
+</html>
